@@ -1,6 +1,6 @@
 # Prompt Engineering Fundamentals
 
-[![Prompt Engineering Fundamentals](./images/04-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](https://learn.microsoft.com/_themes/docs.theme/master/en-us/_themes/global/video-embed.html?id=d54c0c69-b183-4a6c-80ed-8b1a8f299cff?WT.mc_id=academic-105485-koreyst)
+[![Prompt Engineering Fundamentals](./images/04-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](https://learn.microsoft.com/_themes/docs.theme/master/en-us/_themes/global/video-embed.html?id=eb8a0805-5623-4da8-b3c3-1b0ecccffa64?WT.mc_id=academic-105485-koreyst)
 
 The way your write your prompt to an LLM also matters. A carefully-crafted prompt can achieve a better quality of response. But what exactly do terms like _prompt_ and _prompt engineering_ mean? And how do I improve the prompt _input_ that I send to the LLM? These are the questions we'll try to answer with in this chapter and the next.
 
@@ -199,7 +199,7 @@ Now let's add context and instructions to that basic prompt. The [Chat Completio
 The request is now in the form below, where the _tokenization_ effectively captures relevant information from context and conversation. Now, changing the system context can be as impactful on the quality of completions, as the user inputs provided.
 
 ```python
-response = openai.ChatCompletion.create(
+response = openai.chat.completions.create(
     model="gpt-3.5-turbo",
     messages=[
         {"role": "system", "content": "You are a helpful assistant."},
