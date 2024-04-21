@@ -12,7 +12,14 @@ client = OpenAI()
 deployment = 'gpt-4' #  "gpt-3.5-turbo"
 
 # add your completion code
-prompt = "Complete the following: Once upon a time there was a"
+
+no_recipes = input("No of recipes (for example, 5): ")
+
+ingredients = input("List of ingredients (for example, chicken, potatoes, and carrots): ")
+
+# interpolate the number of recipes into the prompt an ingredients
+prompt = f"Show me {no_recipes} recipes for a dish with the following ingredients: {ingredients}. Per recipe, list all the ingredients used"
+
 messages = [{"role": "user", "content": prompt}]  
 # make completion
 completion = client.chat.completions.create(model=deployment, messages=messages)
